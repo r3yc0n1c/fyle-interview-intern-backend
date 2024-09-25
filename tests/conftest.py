@@ -66,3 +66,15 @@ def h_principal():
     }
 
     return headers
+
+
+@pytest.fixture
+def h_unknown_student():
+    headers = {
+        'X-Principal': json.dumps({
+            'student_id': 100,
+            'user_id': 102
+        })
+    }
+
+    return headers
